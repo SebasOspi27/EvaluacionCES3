@@ -1,0 +1,22 @@
+<!ELEMENT precio (#PCDATA )>
+<!ELEMENT bib (libro*)>
+<!ATTLIST bib nombre CDATA #REQUIRED>
+<!ATTLIST bib centro CDATA #REQUIRED>
+<!ATTLIST bib portada CDATA #REQUIRED>
+<!ELEMENT libro (titulo,(autor+ | editor+ ),editorial, precio, codigoPais )>
+<!ATTLIST libro anyo CDATA #REQUIRED>
+<!ELEMENT autor (apellido, nombre, cedula, infoAutor? )>
+<!ATTLIST autor id ID #REQUIRED>
+<!ELEMENT editor (apellido, nombre, afiliacion )>
+<!ELEMENT titulo (#PCDATA )>
+<!ELEMENT apellido (#PCDATA )>
+<!ELEMENT nombre (#PCDATA )>
+<!ELEMENT afiliacion (#PCDATA )>
+<!ELEMENT editorial (#PCDATA )>
+<!ELEMENT codigoPais (#PCDATA )>
+<!ELEMENT cedula (#PCDATA )>
+<!ELEMENT infoAutor (ciudad, pais, telefono, correo )>
+<!ELEMENT ciudad (#PCDATA )>
+<!ELEMENT pais (#PCDATA )>
+<!ELEMENT telefono (#PCDATA )>
+<!ELEMENT correo (#PCDATA )>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="Info.xsd" />
+
+    <xs:element name="bib">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" minOccurs="1" type="xs:string" />
+                            <xs:element ref="autor" minOccurs="1" maxOccurs="unbounded" />
+                            <xs:element name="editorial" minOccurs="1" type="xs:string" />
+                            <xs:element name="precio" minOccurs="1" type="xs:decimal" />
+                            <xs:element name="codigoPais" minOccurs="1" default="ESP">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="ESP" />
+                                        <xs:enumeration value="FRA" />
+                                        <xs:enumeration value="ITA" />
+                                        <xs:enumeration value="ALE" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="anyo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                    <xs:minInclusive value="1990" />
+                                    <xs:maxInclusive value="2022" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" />
+            <xs:attribute name="centro" type="xs:string" />
+            <xs:attribute name="portada" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="autor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="apellido" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="([a-z])*" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nombre" minOccurs="1" type="xs:string" />
+                <xs:element name="cedula" minOccurs="1" type="xs:string" />
+                <!-- No se puede implementar la cedula como ID, ya que este metodo va a pedir empezar desde 0, es decir
+                ID1, ID2, ID3... Se implemento un ID unico y requerido como elemento del a utor para complementar el punto solicitado -->
+                <xs:element name="infoAutor" minOccurs="0" maxOccurs="1" type="infoAutor" />
+            </xs:sequence>
+            <xs:attribute name="foto" type="xs:string" />
+            <xs:attribute name="infoAutor" type="xs:string" />
+            <xs:attribute name="id" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

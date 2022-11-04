@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<?xml-stylesheet href="Evaluacion.xslt" type="text/xsl"?>
+
+<bib nombre="Tomas Carrasquilla" centro=" - Sede Poblado" portada="https://i0.wp.com/cms.babbel.news/wp-content/uploads/2022/02/Most_Beautiful_Libraries-1.png?resize=830%2C467"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Evaluacion.xsd">
+
+    <libro anyo="1994">
+        <titulo>TCP/IP Illustrated</titulo>
+        <autor id="ID1" foto="https://crearmiempresa.es/wp-content/uploads/2015/07/frases-de-steve-jobs.jpg">
+            <apellido>stevens</apellido>
+            <nombre>W.</nombre>
+            <cedula>11932256481</cedula>
+            <infoAutor>
+                <ciudad>Medellin</ciudad>
+                <pais>Colombia</pais>
+                <telefono>3245652015</telefono>
+                <correo>wstevens@gmail.com</correo>
+            </infoAutor>
+            <!-- Se implementa la información personal del autor -->
+        </autor>
+        <editorial>Addison-Wesley</editorial>
+        <precio>65.95</precio>
+        <codigoPais></codigoPais> 
+        <!-- Se valida que el valor "default" este funcionando correctamente -->
+    </libro>
+
+    <libro anyo="1992">
+        <titulo>Advanced Programming for Unix environment</titulo>
+        <autor id="ID2">
+            <apellido>stevens</apellido>
+            <nombre>W.</nombre>
+            <cedula>1654897235</cedula>
+            <infoAutor>
+                <ciudad>Medellin</ciudad>
+                <pais>Colombia</pais>
+                <telefono>3245652015</telefono>
+                <correo>wstevens@gmail.com</correo>
+            </infoAutor>
+        </autor>
+        <editorial>Addison-Wesley</editorial>
+        <precio>65.95</precio>
+        <codigoPais>FRA</codigoPais>
+    </libro>
+
+    <libro anyo="2000">
+        <titulo>Data on the Web</titulo>
+        <autor id="ID3">
+            <apellido>abiteboul</apellido>
+            <nombre>Serge</nombre>
+            <cedula>1365987412</cedula>
+            <infoAutor>
+                <ciudad>Medellin</ciudad>
+                <pais>Colombia</pais>
+                <telefono>3192563201</telefono>
+                <correo>sergeabiteboul@gmail.com</correo>
+            </infoAutor>
+        </autor>
+        <autor id="ID4">
+            <apellido>buneman</apellido>
+            <nombre>Peter</nombre>
+            <cedula>114658987</cedula>
+        </autor>
+        <autor id="ID5">
+            <apellido>suciu</apellido>
+            <nombre>Dan</nombre>
+            <cedula>1365987452</cedula>
+        </autor>
+        <editorial>Morgan Kaufmann editorials</editorial>
+        <precio>39.95</precio>
+        <codigoPais>ITA</codigoPais>
+    </libro>
+
+    <libro anyo="1999">
+        <titulo> Economics of Technology for Digital TV</titulo>
+        <autor id="ID6">
+            <apellido>gerbarg</apellido>
+            <nombre>Darcy</nombre>
+            <cedula>14569874125</cedula>
+            <infoAutor>
+                <ciudad>Medellin</ciudad>
+                <pais>Colombia</pais>
+                <telefono>3146548214</telefono>
+                <correo>darcygerbarg@gmail.com</correo>
+            </infoAutor>
+        </autor>
+        <editorial>Kluwer Academic editorials</editorial>
+        <precio>129.95</precio>
+        <codigoPais>ALE</codigoPais>
+    </libro>
+
+</bib>
